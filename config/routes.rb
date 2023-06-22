@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Defines the root path route ("/")
-  # root "articles#index"
+  #good practice api/v1/model_name/action
+  namespace 'api' do
+    namespace 'v1' do
+      get 'read_csv'
+    end
+  end
 end

@@ -49,7 +49,7 @@ Para aplicar filtros de acordo com sua conveniência, utilize os parâmetros de 
 
 Uma vez que o servidor estiver em execução, você pode fazer solicitações aos endpoints mencionados usando a URL base http://localhost:3000.
 
-# Testes
+# Testes RSpec
 
 Para garantir o correto funcionamento da API RESTful, foram criados testes no controlador para testar os dois endpoints usando a extensão da biblioteca de testes RSpec.
 
@@ -60,3 +60,7 @@ Execute no terminal:
 >bundle exec rspec
 
 ![Alt text](<Screen Shot 2023-06-23 at 15.03.09.png>)
+
+# Contribuçōes
+
+É um código aberto, fica a vontade de contribuir no repositório, se quiser conversar pode me enviar uma mensagem no seguinte endereço jeanpieeraguilar@gmail.com.

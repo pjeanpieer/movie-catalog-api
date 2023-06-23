@@ -11,8 +11,11 @@ class Api::V1::MoviesController < ApplicationController
   end
 
   def index
+
+    # Ascending order by year
     @movies = Movie.order(year: :asc)
 
+    # Filters movies based on the parameters provided in the request
     @movies = @movies.where(title: params[:title]) if params[:title].present?
     @movies = @movies.where(genre: params[:genre]) if params[:genre].present?
     @movies = @movies.where(year: params[:year]) if params[:year].present?
@@ -20,6 +23,7 @@ class Api::V1::MoviesController < ApplicationController
     @movies = @movies.where(published_at: params[:published_at]) if params[:published_at].present?
     @movies = @movies.where(description: params[:description]) if params[:description].present?
 
+    # Render JSON except created and updated_at
     render json: JSON.pretty_generate(@movies.as_json(except: [:created_at, :updated_at]))
   end
 
@@ -43,6 +47,6 @@ class Api::V1::MoviesController < ApplicationController
         description: row['description']
       )
     end
-    
+
   end
 end

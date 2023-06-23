@@ -1,4 +1,5 @@
 require 'csv'
+require 'securerandom'
 
 class Api::V1::MoviesController < ApplicationController
 
@@ -8,6 +9,7 @@ class Api::V1::MoviesController < ApplicationController
 
     csv.each do |row|
       Movie.find_or_create_by(
+        id: SecureRandom.uuid,
         title: row['title'],
         genre: row['listed_in'],
         year: row['release_year'],

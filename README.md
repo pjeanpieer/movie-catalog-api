@@ -1,24 +1,4 @@
-# README
+# Movie Catalog Api
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Esta API RESTFUL construída em Rails para um catálogo de filmes foi desenvolvida com dois endpoints GET para acessar a determinados recursos. O primeiro endpoint é usado para importar informações de um arquivo CSV, enquanto o segundo é utilizado para listar e filtrar por país, ano, título e mais, em formato JSON.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...

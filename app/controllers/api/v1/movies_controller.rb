@@ -22,6 +22,6 @@ class Api::V1::MoviesController < ApplicationController
 
   def index
     @movies = Movie.order(year: :asc)
-    render json: JSON.pretty_generate(@movies.as_json)
+    render json: JSON.pretty_generate(@movies.as_json(except: [:created_at, :updated_at]))
   end
 end

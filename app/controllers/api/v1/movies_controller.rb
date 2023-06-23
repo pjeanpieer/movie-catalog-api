@@ -19,4 +19,9 @@ class Api::V1::MoviesController < ApplicationController
     response = { message: 'Download successful' }
     render json: JSON.pretty_generate(response)
   end
+
+  def index
+    @movies = Movie.order(year: :asc)
+    render json: JSON.pretty_generate(@movies.as_json)
+  end
 end

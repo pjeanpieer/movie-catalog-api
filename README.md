@@ -8,13 +8,22 @@ Este endpoint importa informações de filmes através de um arquivo CSV:
 
 >GET/api/v1/movies/read_csv
 
+![Screen Shot 2023-06-23 at 14 47 20](https://github.com/pjeanpieer/movie-catalog-api/assets/122786689/dbb6b7e7-af4c-4f39-8230-a3eec1f3e742)
+
+
 Este endpoint lista todos os filmes cadastrados em formato JSON:
 
 >GET/api/v1/movies
 
+![Screen Shot 2023-06-23 at 14 49 00](https://github.com/pjeanpieer/movie-catalog-api/assets/122786689/4e464871-3f3b-49ce-832b-fc07fd7c07eb)
+
+
 Para aplicar filtros de acordo com sua conveniência, utilize os parâmetros de consulta:
 
 >GET/api/v1/movies?genre=Crime%20TV%20Shows,%20TV%20Dramas,%20TV%20Mysteries&year=2020
+
+![Screen Shot 2023-06-23 at 14 46 14](https://github.com/pjeanpieer/movie-catalog-api/assets/122786689/e29d0de4-32d8-4127-92eb-752f2ac7e6a5)
+
 
 # Como utilizar a API
 

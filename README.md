@@ -20,7 +20,7 @@ Para aplicar filtros de acordo com sua conveniência, utilize os parâmetros de 
 
 1. Clone este repositório em sua máquina local:
 
->git clone https://github.com/tu-usuario/tu-repositorio.git
+>gh repo clone pjeanpieer/movie-catalog-api
 
 2. Instale as dependências executando o seguinte comando:
 
@@ -39,3 +39,13 @@ Para aplicar filtros de acordo com sua conveniência, utilize os parâmetros de 
 >rails server
 
 Uma vez que o servidor estiver em execução, você pode fazer solicitações aos endpoints mencionados usando a URL base http://localhost:3000.
+
+# Testes
+
+Para garantir o correto funcionamento da API RESTful, foram criados testes no controlador para testar os dois endpoints usando a extensão da biblioteca de testes RSpec.
+
+>gema 'rspec-rails'
+
+Execute no terminal:
+
+>bundle exec rspec

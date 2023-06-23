@@ -48,3 +48,4 @@ group :development do
 end
 
 gem 'csv'
+gem 'rspec-rails'

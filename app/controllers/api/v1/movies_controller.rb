@@ -2,8 +2,23 @@ require 'csv'
 require 'securerandom'
 
 class Api::V1::MoviesController < ApplicationController
+  before_action :check_database, only: [:read_csv]
 
   def read_csv
+    response = { message: 'Download successful' }
+    render json: JSON.pretty_generate(response)
+  end
+
+  def index
+    @movies = Movie.order(year: :asc)
+    render json: JSON.pretty_generate(@movies.as_json(except: [:created_at, :updated_at]))
+  end
+
+  private
+
+  def check_database
+    return if Movie.exists?
+
     csv_text = File.read('netflix_titles.csv')
     csv = CSV.parse(csv_text, headers: true)
 
@@ -18,12 +33,5 @@ class Api::V1::MoviesController < ApplicationController
         description: row['description']
       )
     end
-    response = { message: 'Download successful' }
-    render json: JSON.pretty_generate(response)
-  end
-
-  def index
-    @movies = Movie.order(year: :asc)
-    render json: JSON.pretty_generate(@movies.as_json(except: [:created_at, :updated_at]))
   end
 end

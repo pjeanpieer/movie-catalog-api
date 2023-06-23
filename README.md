@@ -58,3 +58,5 @@ Para garantir o correto funcionamento da API RESTful, foram criados testes no co
 Execute no terminal:
 
 >bundle exec rspec
+
+![Alt text](<Screen Shot 2023-06-23 at 15.03.09.png>)
